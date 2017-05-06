@@ -1,15 +1,15 @@
 ### Comparison Criteria
 
 #### Language purpose/genesis
-  ** Why was the language created?
+  **Why was the language created?**
   
   PHP was created as a server-side scripting language designed primarily for web development but also used as a general-purpose programming language. 
   
-  ** What problems was the language trying to address?
+  **What problems was the language trying to address?**
   
   Wanted to work with web forms and communicate with databases
   
-  ** Is the language a reaction to a previous language or a replacement for another language?
+  **Is the language a reaction to a previous language or a replacement for another language?**
   
   It is a reaction to the previous language C, in which he wrote CGI programs to maintain his webpage
   
