@@ -11,23 +11,56 @@
   
   * Is the language a reaction to a previous language or a replacement for another language?
   
-  It is a reaction to the previous language C, 
+  It is a reaction to the previous language C, in which he wrote CGI programs to maintain his webpage
+  
 * Unique features of the language
   * Does the language have any particularly unique features?
+  
+  Can be embedded into HTML using <?php [insert code] ?>
+  
 * Name spaces
   * How are name spaces implemented?
+  
+         <?php
+         namespace MyProject;
+         ?>
+  
   * How are name spaces used?
+  
+ To solve two problems that authors of libraries and applications encounter when creating re-usable code elements such as classes or functions: name collisions and ability to alias, improving readability.
+  
 * Types
     * What types does the language support?
+    
+    String,
+    Integer,
+    Float (floating point numbers - also called double),
+    Boolean,
+    Array,
+    Object,
+    NULL,
+    Resource
+    
     * Are both reference and value types supported?
     * Can new value types be created?
 * Classes
   * Defining
+  
+        <?php
+        class SimpleClass
+        {  
+          //insert code 
+        }
+        ?>
+  
   * Creating new instances
   * Constructing/initializing
   * Destructing/de-initializing
 * Instance reference name in data type (class)
   * this?  self?
+  
+  
+  
 * Properties
   * Getters and setters...write your own or built in?
   * Backing variables?
@@ -49,8 +82,25 @@
   * How are values compared? (i.e. comparing two strings)
 * Null/nil references
   * Which does the language use? (null/nil/etc)
+  
+  NULL
+  
   * Does the language have features for handling null/nil references?
+  
+  PHP has is_null() and unset() functions to check if something is null or remove null, be null casting is not allowed.
+  
 * Errors and exception handling
+
+"die()" statements
+
+error_function(error_level,error_message,error_file,error_line,error_context)
+
+error_log() 
+
+trigger_error()
+
+set_error_handler("customError");
+
 * Lambda expressions, closures, or functions as types
 * Implementation of listeners and event handlers
 * Singleton
