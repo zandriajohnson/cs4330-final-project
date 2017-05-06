@@ -42,9 +42,17 @@
     Resource
     
     * Are both reference and value types supported?
+    
+    
+    
     * Can new value types be created?
+    
+    
+    
 * Classes
   * Defining
+  
+  Unless autoloading is used, then classes must be defined before they are used.
   
         <?php
         class SimpleClass
@@ -54,12 +62,37 @@
         ?>
   
   * Creating new instances
+  
+        <?php
+        $instance = new SimpleClass();
+
+        // This can also be done with a variable:
+        $className = 'SimpleClass';
+        $instance = new $className(); // new SimpleClass()
+        ?>
+  
   * Constructing/initializing
+  
+        void __construct ([ mixed $args = "" [, $... ]] )
+  
+        function __construct() {
+           print "In BaseClass constructor\n";
+           $this->name = "MyDestructableClass";
+         }
+  
   * Destructing/de-initializing
+  
+        void __destruct ( void )
+        
+        
+        function __destruct() {
+          print "Destroying " . $this->name . "\n";
+        }
+  
 * Instance reference name in data type (class)
   * this?  self?
   
-  
+  The pseudo-variable $this is available when a method is called from within an object context.
   
 * Properties
   * Getters and setters...write your own or built in?
@@ -67,12 +100,65 @@
   * Computed properties?
 * Interfaces / protocols
   * What does the language support?
+  
+  Interfaces
+  
   * What abilities does it have?
+  
+  Object interfaces allow you to create code which specifies which methods a class must implement, without having to define how these methods are handled.
+  
   * How is it used?
+  
+  Interfaces can be extended like classes using the extends operator.
+  
+  The class implementing the interface must use the exact same method signatures as are defined in the interface.
+  
+      interface iTemplate
+      { 
+       //code
+      }
+
+
+      class Template implements iTemplate
+      {
+       //code
+      }
+
+      interface a
+      {
+        public function foo();
+      }
+
+      interface b extends a
+      {
+       public function baz(Baz $baz);
+      }
+
+      interface c extends a, b
+      {
+       public function baz();
+      }
+      
+      
 * Inheritance / extension
+
+PHP makes use of this principle in its object model. 
+
+The subclass inherits all of the public and protected methods from the parent class. Unless a class overrides those methods, they will retain their original functionality.
+
+    class Bar extends Foo
+
 * Reflection
   * What reflection abilities are supported?
+  
+  PHP 5 comes with a complete reflection API that adds the ability to reverse-engineer classes, interfaces, functions, methods and extensions. Additionally, the reflection API offers ways to retrieve doc comments for functions, classes and methods.
+  
   * How is reflection used?
+  
+  From Shell (a Terminal)
+  
+  Through different classes such as Reflection, ReflectionClass, ReflectionMethod, Reflector interfaces, etc.
+  
 * Memory management
   * How is it handled?
   * How does it work?
@@ -91,15 +177,18 @@
   
 * Errors and exception handling
 
-"die()" statements
+      "die()" statements
 
-error_function(error_level,error_message,error_file,error_line,error_context)
+      error_function(error_level,error_message,error_file,error_line,error_context)
 
-error_log() 
+      error_log() 
 
-trigger_error()
+      trigger_error()
 
-set_error_handler("customError");
+      set_error_handler("customError");
+      
+  
+  PHP also has try, catch, finally for exception handling.
 
 * Lambda expressions, closures, or functions as types
 * Implementation of listeners and event handlers
