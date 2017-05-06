@@ -1,8 +1,10 @@
-# Home
+# OO LANGUAGE COMPARISON
 
-### cs4330-final-project
+### CS 4330 Final Project
 OO Language Comparison
 
+PHP vs. Swift
+
 Team members:
-Zandria Johnson
-Xavier Williams
+
+Zandria Johnson | Xavier Williams
