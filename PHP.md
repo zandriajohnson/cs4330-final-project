@@ -1,31 +1,31 @@
 ### Comparison Criteria
 
 #### Language purpose/genesis
-  ** Why was the language created?**
+  ** Why was the language created?
   
   PHP was created as a server-side scripting language designed primarily for web development but also used as a general-purpose programming language. 
   
-  ** What problems was the language trying to address?**
+  ** What problems was the language trying to address?
   
   Wanted to work with web forms and communicate with databases
   
-  ** Is the language a reaction to a previous language or a replacement for another language?**
+  ** Is the language a reaction to a previous language or a replacement for another language?
   
   It is a reaction to the previous language C, in which he wrote CGI programs to maintain his webpage
   
 #### Unique features of the language
-  ** Does the language have any particularly unique features?**
+  ** Does the language have any particularly unique features?
   
   Can be embedded into HTML using <?php [insert code] ?>
   
 #### Name spaces
-  ** How are name spaces implemented?**
+  ** How are name spaces implemented?
   
          <?php
          namespace MyProject;
          ?>
   
-  ** How are name spaces used?**
+  ** How are name spaces used?
   
  To solve two problems that authors of libraries and applications encounter when creating re-usable code elements such as classes or functions: name collisions and ability to alias, improving readability.
   
@@ -50,7 +50,7 @@
     
     
 #### Classes
-  ** Defining**
+  ** Defining
   
   Unless autoloading is used, then classes must be defined before they are used.
   
@@ -61,7 +61,7 @@
         }
         ?>
   
-  ** Creating new instances**
+  ** Creating new instances
   
         <?php
         $instance = new SimpleClass();
@@ -71,7 +71,7 @@
         $instance = new $className(); // new SimpleClass()
         ?>
   
-  ** Constructing/initializing**
+  ** Constructing/initializing
   
         void __construct ([ mixed $args = "" [, $... ]] )
   
@@ -80,7 +80,7 @@
            $this->name = "MyDestructableClass";
          }
   
-  ** Destructing/de-initializing**
+  ** Destructing/de-initializing
   
         void __destruct ( void )
         
@@ -99,15 +99,15 @@
   * Backing variables?
   * Computed properties?
 ### Interfaces / protocols
-  ** What does the language support?**
+  ** What does the language support?
   
   Interfaces
   
-  ** What abilities does it have?**
+  ** What abilities does it have?
   
   Object interfaces allow you to create code which specifies which methods a class must implement, without having to define how these methods are handled.
   
-  ** How is it used?**
+  ** How is it used?
   
   Interfaces can be extended like classes using the extends operator.
   
