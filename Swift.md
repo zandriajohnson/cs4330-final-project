@@ -1,8 +1,4 @@
-Language purpose/genesis
-  Why was the language created?
-    Swift is designed to work with Apple's Cocoa and Cocoa Touch frameworks and the large body of extant Objective-C (ObjC) code written for Apple products.
-    
-    ### Comparison Criteria
+### Comparison Criteria
 
 * Language purpose/genesis
   * Why was the language created?
@@ -52,14 +48,45 @@ Advanced control flow with do, guard, defer, and repeat keywords
   * Defining
  
  Class classname {
+   
+   
    Definition 1
+   
+   
    Definition 2
-    --- 
+   
+   
+   --- 
+   
+   
    Definition N
+
+
 }
  
   * Creating new instances
   * Constructing/initializing
+  
+  **Syntax**
+  init() {
+  //New Instance initialization goes here
+  }
+
+
+**Example**
+
+
+struct rectangle {
+   var length: Double
+   var breadth: Double
+   init() {
+      length = 6
+      breadth = 12
+   }
+}
+var area = rectangle()
+println("area of rectangle is \(area.length*area.breadth)")
+  
   * Destructing/de-initializing
 * Instance reference name in data type (class)
   * this?  self?
