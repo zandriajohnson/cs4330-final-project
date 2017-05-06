@@ -45,63 +45,151 @@ Advanced control flow with do, guard, defer, and repeat keywords
     No they are copied when they are passed around in code. 
     
 * Classes
-  * Defining
+  
+**Defining**
  
- Class classname {
-   
-   
-   Definition 1
-   
-   
-   Definition 2
-   
-   
-   --- 
-   
-   
-   Definition N
-
-
-}
+        Class classname {
+        
+         Definition 1
+         Definition 2
+         --- 
+         Definition N
+         
+        }
  
   * Creating new instances
+  
+  Very similar to creating structioners and classes
+  
+  **Example**
+  
+      let someResolution = Resolution()
+      let someVideoMode = VideoMode()
+  
   * Constructing/initializing
   
   **Syntax**
-  init() {
-  //New Instance initialization goes here
-  }
+      
+      init() {
+       //New Instance initialization goes here
+      }
 
 
 **Example**
 
-
-struct rectangle {
-   var length: Double
-   var breadth: Double
-   init() {
+    struct rectangle {
+    
+     var length: Double
+     var breadth: Double
+     
+     init() {
       length = 6
       breadth = 12
-   }
-}
-var area = rectangle()
-println("area of rectangle is \(area.length*area.breadth)")
+      }
+     
+     }
+    
+    var area = rectangle()
+    println("area of rectangle is \(area.length*area.breadth)")
   
   * Destructing/de-initializing
+  
+  **Example**
+  
+      var counter = 0;  // for reference counting
+      class baseclass {
+       init() {
+        counter++;
+       }
+       deinit {
+        counter--;
+       } 
+      }
+
+      var print: baseclass? = baseclass()
+      println(counter)
+      print = nil
+      println(counter)
+  
 * Instance reference name in data type (class)
   * this?  self?
+  **self**
+  
+      class PersonClass {
+       var name: String
+       init(name: String) {
+         self.name = name
+       }
+      }
+      var person = PersonClass(name: "John Doe")
+  
+  
 * Properties
   * Getters and setters...write your own or built in?
+  
+  Build in.
+  
   * Backing variables?
+  
+You can use instance variables as a backing store for the values stored in a property. Swift unifies these concepts into a single property declaration. A Swift property does not have a corresponding instance variable, and the backing store for a property is not accessed directly. This approach avoids confusion about how the value is accessed in different contexts and simplifies the property’s declaration into a single, definitive statement.
+  
   * Computed properties?
+  
+  Computed properties calculate (rather than store) a value. Computed properties are provided by classes, structures, and enumerations. Stored properties are provided only by classes and structures.
+  
 * Interfaces / protocols
   * What does the language support?
+  
+  Swift supports inferred types to make code cleaner and less prone to mistakes, and modules eliminate headers and provide namespaces. Also, swift supports five access control levels for symbols: open, public, internal, fileprivate, and private. Unlike many object-oriented languages, these access controls ignore inheritance hierarchies.
+  
   * What abilities does it have?
+  
+A key element of the Swift system is its ability to be cleanly debugged and run within the development environment, using a read–eval–print loop (REPL), giving it interactive properties more in common with the scripting abilities of Python than traditional system programming languages.
+  
   * How is it used?
+  
+  Just like Java interfaces, but it's called a protocol in swift
+  
+      protocol MyEngine {
+        func doWork() -> Bool
+      }
+  
 * Inheritance / extension
+
+A subclass inherits the properties, methods and functions of its base class. To define a subclass ':' is used before the base class name.
+
+    class StudDetails {
+       var mark1: Int;
+       var mark2: Int;
+
+       init(stm1:Int, results stm2:Int) {
+          mark1 = stm1;
+          mark2 = stm2;
+       }
+
+       func print() {
+          println("Mark1:\(mark1), Mark2:\(mark2)")
+       }
+     }
+
+    class display : StudDetails {
+       init() {
+          super.init(stm1: 93, results: 89)
+       }
+    }
+
+    let marksobtained = display()
+    marksobtained.print()
+
 * Reflection
   * What reflection abilities are supported?
+  
+  Swift no longer has reflection but the struct Mirror can resemble Mirror. 
+  
   * How is reflection used?
+  
+  Reflection in Swift is easy using the struct Mirror, with it we can inspect the names and types of properties in an instance of a struct or an instance of a class.
+  
 * Memory management
   * How is it handled?
   * How does it work?
