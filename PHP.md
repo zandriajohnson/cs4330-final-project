@@ -1,36 +1,36 @@
 ### Comparison Criteria
 
-* Language purpose/genesis
-  * Why was the language created? 
+#### Language purpose/genesis
+  ** Why was the language created?**
   
   PHP was created as a server-side scripting language designed primarily for web development but also used as a general-purpose programming language. 
   
-  * What problems was the language trying to address?
+  ** What problems was the language trying to address?**
   
   Wanted to work with web forms and communicate with databases
   
-  * Is the language a reaction to a previous language or a replacement for another language?
+  ** Is the language a reaction to a previous language or a replacement for another language?**
   
   It is a reaction to the previous language C, in which he wrote CGI programs to maintain his webpage
   
-* Unique features of the language
-  * Does the language have any particularly unique features?
+#### Unique features of the language
+  ** Does the language have any particularly unique features?**
   
   Can be embedded into HTML using <?php [insert code] ?>
   
-* Name spaces
-  * How are name spaces implemented?
+#### Name spaces
+  ** How are name spaces implemented?**
   
          <?php
          namespace MyProject;
          ?>
   
-  * How are name spaces used?
+  ** How are name spaces used?**
   
  To solve two problems that authors of libraries and applications encounter when creating re-usable code elements such as classes or functions: name collisions and ability to alias, improving readability.
   
-* Types
-    * What types does the language support?
+#### Types
+    ** What types does the language support?**
     
     String,
     Integer,
@@ -41,16 +41,16 @@
     NULL,
     Resource
     
-    * Are both reference and value types supported?
+    ** Are both reference and value types supported?**
     
     
     
-    * Can new value types be created?
+    ** Can new value types be created?**
     
     
     
-* Classes
-  * Defining
+#### Classes
+  ** Defining**
   
   Unless autoloading is used, then classes must be defined before they are used.
   
@@ -61,7 +61,7 @@
         }
         ?>
   
-  * Creating new instances
+  ** Creating new instances**
   
         <?php
         $instance = new SimpleClass();
@@ -71,7 +71,7 @@
         $instance = new $className(); // new SimpleClass()
         ?>
   
-  * Constructing/initializing
+  ** Constructing/initializing**
   
         void __construct ([ mixed $args = "" [, $... ]] )
   
@@ -80,7 +80,7 @@
            $this->name = "MyDestructableClass";
          }
   
-  * Destructing/de-initializing
+  ** Destructing/de-initializing**
   
         void __destruct ( void )
         
@@ -89,25 +89,25 @@
           print "Destroying " . $this->name . "\n";
         }
   
-* Instance reference name in data type (class)
+#### Instance reference name in data type (class)
   * this?  self?
   
   The pseudo-variable $this is available when a method is called from within an object context.
   
-* Properties
+#### Properties
   * Getters and setters...write your own or built in?
   * Backing variables?
   * Computed properties?
-* Interfaces / protocols
-  * What does the language support?
+### Interfaces / protocols
+  ** What does the language support?**
   
   Interfaces
   
-  * What abilities does it have?
+  ** What abilities does it have?**
   
   Object interfaces allow you to create code which specifies which methods a class must implement, without having to define how these methods are handled.
   
-  * How is it used?
+  ** How is it used?**
   
   Interfaces can be extended like classes using the extends operator.
   
@@ -140,7 +140,7 @@
       }
       
       
-* Inheritance / extension
+#### Inheritance / extension
 
 PHP makes use of this principle in its object model. 
 
@@ -148,7 +148,7 @@ The subclass inherits all of the public and protected methods from the parent cl
 
     class Bar extends Foo
 
-* Reflection
+#### Reflection
   * What reflection abilities are supported?
   
   PHP 5 comes with a complete reflection API that adds the ability to reverse-engineer classes, interfaces, functions, methods and extensions. Additionally, the reflection API offers ways to retrieve doc comments for functions, classes and methods.
@@ -159,23 +159,23 @@ The subclass inherits all of the public and protected methods from the parent cl
   
   Through different classes such as Reflection, ReflectionClass, ReflectionMethod, Reflector interfaces, etc.
   
-* Memory management
+#### Memory management
   * How is it handled?
   * How does it work?
   * Garbage collection?
   * Automatic reference counting?
-* Comparisons of references and values
+#### Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
-* Null/nil references
-  * Which does the language use? (null/nil/etc)
+#### Null/nil references
+  ** Which does the language use? (null/nil/etc)
   
   NULL
   
-  * Does the language have features for handling null/nil references?
+  ** Does the language have features for handling null/nil references?
   
   PHP has is_null() and unset() functions to check if something is null or remove null, be null casting is not allowed.
   
-* Errors and exception handling
+#### Errors and exception handling
 
       "die()" statements
 
