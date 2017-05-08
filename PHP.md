@@ -318,16 +318,17 @@ xml_set_notation_decl_handler() .. etc.
   **Does the language support procedural programming?**
   
   Yes
-  
+ 
+ Normal: 
       $mysqli = new mysqli("localhost", "my_user", "my_password", "world");
   
  Procedural:     
       $link = mysqli_connect("localhost", "my_user", "my_password", "world");
   
-       
+ Normal:      
       $mysqli->query("CREATE TEMPORARY TABLE myCountry LIKE Country");
 
-  Procudural:
+ Procudural:
        mysqli_query($link, "CREATE TEMPORARY TABLE myCountry LIKE Country");
  
 ## Functional programming
