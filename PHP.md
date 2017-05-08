@@ -44,22 +44,20 @@
 ### Types
    **What types does the language support?**
     
-    String,
-    Integer,
-    Float (floating point numbers - also called double),
-    Boolean,
-    Array,
-    Object,
-    NULL,
-    Resource
+ String, Integer, Float (floating point numbers - also called double),
+  Boolean,
+ Array,
+ Object,
+ NULL,
+Resource
     
-    **Are both reference and value types supported?**
+  **Are both reference and value types supported?**
     
-    A PHP reference is an alias, which allows two different variables to write to the same value.
+A PHP reference is an alias, which allows two different variables to write to the same value.
     
-    **Can new value types be created?**
+ **Can new value types be created?**
     
-    No
+No
     
     
 ### Classes
