@@ -26,23 +26,24 @@ Powerful error handling built-in
 Advanced control flow with do, guard, defer, and repeat keywords
   
 ### Name spaces
-  ** How are name spaces implemented?**
-  ** How are name spaces used?**
+  **How are name spaces implemented?**
+  
+  **How are name spaces used?**
   
   Swift doesn't support namespaces but as a solution you can create namespaces with stuck. 
   
 ### Types
-    **What types does the language support?**
+   **What types does the language support?**
     
-    Swift supports: inferred, optional, enumeration, value, numeric, no-objective optional, and generic types. 
+ Swift supports: inferred, optional, enumeration, value, numeric, no-objective optional, and generic types. 
     
-    **Are both reference and value types supported?**
+   **Are both reference and value types supported?**
     
-    Yes swift supports both value and reference types.
+ Yes swift supports both value and reference types.
     
-    **Can new value types be created?**
+   **Can new value types be created?**
     
-    No they are copied when they are passed around in code. 
+No they are copied when they are passed around in code. 
     
 ### Classes
   
