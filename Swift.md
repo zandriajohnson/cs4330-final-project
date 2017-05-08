@@ -257,12 +257,52 @@ Closures
 
 * Singleton
   * How is a singleton implemented?
+  
+        class TheOneAndOnlyKraken {
+             static let sharedInstance = TheOneAndOnlyKraken()
+        }
+  
   * Can it be made thread-safe?
+  
+If a singleton is built incorrectly in code, you can have two threads try to initialize a singleton at the same time which can potentially give you two separate instances of a singleton. This means that it's possible for it to not be unique unless we make it thread-safe. This means we want to wrap the initialization in a dispatch_once GCD block to make sure the initialization code only runs once at runtime.
+  
   * Can the singleton instance be lazily instantiated?
+  
+  Yes it can
+  
+      class Avatar {
+       static let defaultSmallSize = CGSize(width: 64, height: 64)
+
+       lazy var smallImage: UIImage = self.largeImage.resizedTo(Avatar.defaultSmallSize)
+       var largeImage: UIImage
+
+       init(largeImage: UIImage) {
+        self.largeImage = largeImage
+       }
+      }
+  
 * Procedural programming
   * Does the language support procedural programming?
+  
+   In Swift, you fundamentally work in a procedural/OOP paradigm, and the whole language is built around that. There are some tools available to let you jump over to a functional style (without the full power of functional programming) when it’s useful. In Haskell, you fundamentally work in a functional paradigm. There are some tools available (monads) to let you jump over to a procedural style (without the full power of procedural programming) when it’s useful.
+  
 * Functional programming
   * Does the language support functional programming?
+  
+Yes functional programming is supported.  
+  
 * Multithreading
   * Threads or thread-like abilities
+  
+  Swift uses threads.
+  
   * How is multitasking accomplished?
+  
+        func updateMaximumPrimaryColumnWidthBasedOnSize(size: CGSize) {
+        if size.width < UIScreen.mainScreen().bounds.width
+          || size.width < size.height {
+            maximumPrimaryColumnWidth = 170.0
+        } else {
+          maximumPrimaryColumnWidth = UISplitViewControllerAutomaticDimension
+         }
+        }
