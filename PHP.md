@@ -206,7 +206,7 @@ The subclass inherits all of the public and protected methods from the parent cl
   
   char *estrndup(const char *s, unsigned int length)
   
-  ** Garbage collection?**
+  **Garbage collection?**
   
   Garbage cycles
   
@@ -214,7 +214,7 @@ The subclass inherits all of the public and protected methods from the parent cl
   
    gc_collect_cycles() 
   
-  ** Automatic reference counting?**
+  **Automatic reference counting?**
   
   A PHP variable is stored in a container called a "zval". A zval container contains, besides the variable's type and value, two additional bits of information.
   
