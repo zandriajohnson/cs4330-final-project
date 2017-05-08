@@ -1,20 +1,20 @@
-### Comparison Criteria
+## Comparison Criteria
 
-* Language purpose/genesis
-  * Why was the language created?
+### Language purpose/genesis
+  **Why was the language created?**
   
   Swift is designed to work with Apple's Cocoa and Cocoa Touch frameworks and the large body of extant Objective-C (ObjC) code written for Apple products.
   
-  * What problems was the language trying to address?
+  **What problems was the language trying to address?**
   
   The goal of the Swift project is to create the best available language for uses ranging from systems programming, to mobile and desktop apps, scaling up to cloud services. Most importantly, Swift is designed to make writing and maintaining correct programs easier for the developer. Swift is intended to be more resilient to erroneous code ("safer") than Objective-C, and more concise.
   
-  * Is the language a reaction to a previous language or a replacement for another language?
+  **Is the language a reaction to a previous language or a replacement for another language?**
   
   Swift was written  as a reaction and improvemnt language taking ideas from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and many others. 
   
-* Unique features of the language
-  * Does the language have any particularly unique features?
+### Unique features of the language
+  **Does the language have any particularly unique features?**
   
 Closures unified with function pointers
 Tuples and multiple return values
@@ -25,26 +25,26 @@ Functional programming patterns, e.g., map and filter
 Powerful error handling built-in
 Advanced control flow with do, guard, defer, and repeat keywords
   
-* Name spaces
-  * How are name spaces implemented?
-  * How are name spaces used?
+### Name spaces
+  ** How are name spaces implemented?**
+  ** How are name spaces used?**
   
   Swift doesn't support namespaces but as a solution you can create namespaces with stuck. 
   
-* Types
-    * What types does the language support?
+### Types
+    **What types does the language support?**
     
     Swift supports: inferred, optional, enumeration, value, numeric, no-objective optional, and generic types. 
     
-    * Are both reference and value types supported?
+    **Are both reference and value types supported?**
     
     Yes swift supports both value and reference types.
     
-    * Can new value types be created?
+    **Can new value types be created?**
     
     No they are copied when they are passed around in code. 
     
-* Classes
+### Classes
   
 **Defining**
  
@@ -57,25 +57,25 @@ Advanced control flow with do, guard, defer, and repeat keywords
          
         }
  
-  * Creating new instances
+  **Creating new instances**
   
   Very similar to creating structioners and classes
   
-  **Example**
+Example
   
       let someResolution = Resolution()
       let someVideoMode = VideoMode()
   
-  * Constructing/initializing
+  **Constructing/initializing**
   
-  **Syntax**
+Syntax
       
       init() {
        //New Instance initialization goes here
       }
 
 
-**Example**
+Example
 
     struct rectangle {
     
@@ -92,9 +92,9 @@ Advanced control flow with do, guard, defer, and repeat keywords
     var area = rectangle()
     println("area of rectangle is \(area.length*area.breadth)")
   
-  * Destructing/de-initializing
+  **Destructing/de-initializing**
   
-  **Example**
+  Example
   
       var counter = 0;  // for reference counting
       class baseclass {
@@ -111,9 +111,10 @@ Advanced control flow with do, guard, defer, and repeat keywords
       print = nil
       println(counter)
   
-* Instance reference name in data type (class)
-  * this?  self?
-  **self**
+### Instance reference name in data type (class)
+  **this?  self?**
+  
+  self
   
       class PersonClass {
        var name: String
@@ -124,29 +125,29 @@ Advanced control flow with do, guard, defer, and repeat keywords
       var person = PersonClass(name: "John Doe")
   
   
-* Properties
-  * Getters and setters...write your own or built in?
+### Properties
+  **Getters and setters...write your own or built in?**
   
   Build in.
   
-  * Backing variables?
+  **Backing variables?**
   
 You can use instance variables as a backing store for the values stored in a property. Swift unifies these concepts into a single property declaration. A Swift property does not have a corresponding instance variable, and the backing store for a property is not accessed directly. This approach avoids confusion about how the value is accessed in different contexts and simplifies the property’s declaration into a single, definitive statement.
   
-  * Computed properties?
+  **Computed properties?**
   
   Computed properties calculate (rather than store) a value. Computed properties are provided by classes, structures, and enumerations. Stored properties are provided only by classes and structures.
   
-* Interfaces / protocols
-  * What does the language support?
+### Interfaces / protocols
+  **What does the language support?**
   
   Swift supports inferred types to make code cleaner and less prone to mistakes, and modules eliminate headers and provide namespaces. Also, swift supports five access control levels for symbols: open, public, internal, fileprivate, and private. Unlike many object-oriented languages, these access controls ignore inheritance hierarchies.
   
-  * What abilities does it have?
+  **What abilities does it have?**
   
 A key element of the Swift system is its ability to be cleanly debugged and run within the development environment, using a read–eval–print loop (REPL), giving it interactive properties more in common with the scripting abilities of Python than traditional system programming languages.
   
-  * How is it used?
+  **How is it used?**
   
   Just like Java interfaces, but it's called a protocol in swift
   
@@ -154,7 +155,7 @@ A key element of the Swift system is its ability to be cleanly debugged and run 
         func doWork() -> Bool
       }
   
-* Inheritance / extension
+### Inheritance / extension
 
 A subclass inherits the properties, methods and functions of its base class. To define a subclass ':' is used before the base class name.
 
@@ -181,22 +182,22 @@ A subclass inherits the properties, methods and functions of its base class. To 
     let marksobtained = display()
     marksobtained.print()
 
-* Reflection
-  * What reflection abilities are supported?
+### Reflection
+  **What reflection abilities are supported?**
   
   Swift no longer has reflection but the struct Mirror can resemble Mirror. 
   
-  * How is reflection used?
+  **How is reflection used?**
   
   Reflection in Swift is easy using the struct Mirror, with it we can inspect the names and types of properties in an instance of a struct or an instance of a class.
   
-* Memory management
-  * How is it handled and how does it work?
+### Memory management
+  **How is it handled and how does it work?**
   
   Swift uses Automatic Reference Counting (ARC) to track and manage an app’s memory usage. In most cases, this means that memory management “just works” in Swift, and you do not need to think about memory management yourself. ARC automatically frees up the memory used by class instances when those instances are no longer needed.
   
-* Comparisons of references and values
-  * How are values compared? (i.e. comparing two strings)
+### Comparisons of references and values
+  **How are values compared? (i.e. comparing two strings)**
   
   Use the "==" to compare values ex:
   
@@ -207,16 +208,16 @@ A subclass inherits the properties, methods and functions of its base class. To 
           print("S1 is not the same as S2")
       }
   
-* Null/nil references
-  * Which does the language use? (null/nil/etc)
+### Null/nil references
+  **Which does the language use? (null/nil/etc)**
   
   Swift uses nil. 
   
-  * Does the language have features for handling null/nil references?
+  **Does the language have features for handling null/nil references?**
   
  Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil. 
  
-* Errors and exception handling
+### Errors and exception handling
 
 Error handling is the process of responding to and recovering from error conditions in your program. Swift provides first-class support for throwing, catching, propagating, and manipulating recoverable errors at runtime.
 
@@ -232,11 +233,11 @@ As an example, consider the task of reading and processing data from a file on d
     
     throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
 
-* Lambda expressions, closures, or functions as types
+## Lambda expressions, closures, or functions as types
 
 Closures
 
-* Implementation of listeners and event handlers
+### Implementation of listeners and event handlers
 
       class Event<T> {
 
@@ -255,18 +256,18 @@ Closures
         } 
       }
 
-* Singleton
-  * How is a singleton implemented?
+### Singleton
+  **How is a singleton implemented?**
   
         class TheOneAndOnlyKraken {
              static let sharedInstance = TheOneAndOnlyKraken()
         }
   
-  * Can it be made thread-safe?
+  **Can it be made thread-safe?**
   
 If a singleton is built incorrectly in code, you can have two threads try to initialize a singleton at the same time which can potentially give you two separate instances of a singleton. This means that it's possible for it to not be unique unless we make it thread-safe. This means we want to wrap the initialization in a dispatch_once GCD block to make sure the initialization code only runs once at runtime.
   
-  * Can the singleton instance be lazily instantiated?
+  **Can the singleton instance be lazily instantiated?**
   
   Yes it can
   
@@ -281,22 +282,22 @@ If a singleton is built incorrectly in code, you can have two threads try to ini
        }
       }
   
-* Procedural programming
-  * Does the language support procedural programming?
+### Procedural programming
+  **Does the language support procedural programming?**
   
    In Swift, you fundamentally work in a procedural/OOP paradigm, and the whole language is built around that. There are some tools available to let you jump over to a functional style (without the full power of functional programming) when it’s useful. In Haskell, you fundamentally work in a functional paradigm. There are some tools available (monads) to let you jump over to a procedural style (without the full power of procedural programming) when it’s useful.
   
-* Functional programming
-  * Does the language support functional programming?
+### Functional programming
+  **Does the language support functional programming?**
   
 Yes functional programming is supported.  
   
-* Multithreading
-  * Threads or thread-like abilities
+### Multithreading
+  **Threads or thread-like abilities**
   
   Swift uses threads.
   
-  * How is multitasking accomplished?
+  **How is multitasking accomplished?**
   
         func updateMaximumPrimaryColumnWidthBasedOnSize(size: CGSize) {
         if size.width < UIScreen.mainScreen().bounds.width
