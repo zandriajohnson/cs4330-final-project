@@ -191,18 +191,70 @@ A subclass inherits the properties, methods and functions of its base class. To 
   Reflection in Swift is easy using the struct Mirror, with it we can inspect the names and types of properties in an instance of a struct or an instance of a class.
   
 * Memory management
-  * How is it handled?
-  * How does it work?
-  * Garbage collection?
-  * Automatic reference counting?
+  * How is it handled and how does it work?
+  
+  Swift uses Automatic Reference Counting (ARC) to track and manage an app’s memory usage. In most cases, this means that memory management “just works” in Swift, and you do not need to think about memory management yourself. ARC automatically frees up the memory used by class instances when those instances are no longer needed.
+  
 * Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
+  
+  Use the "==" to compare values ex:
+  
+      if s1==s2 {
+          print("S1 is the same as S2")
+      }
+      else {
+          print("S1 is not the same as S2")
+      }
+  
 * Null/nil references
   * Which does the language use? (null/nil/etc)
+  
+  Swift uses nil. 
+  
   * Does the language have features for handling null/nil references?
+  
+ Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil. 
+ 
 * Errors and exception handling
+
+Error handling is the process of responding to and recovering from error conditions in your program. Swift provides first-class support for throwing, catching, propagating, and manipulating recoverable errors at runtime.
+
+Some operations aren’t guaranteed to always complete execution or produce a useful output. Optionals are used to represent the absence of a value, but when an operation fails, it’s often useful to understand what caused the failure, so that your code can respond accordingly.
+
+As an example, consider the task of reading and processing data from a file on disk. There are a number of ways this task can fail, including the file not existing at the specified path, the file not having read permissions, or the file not being encoded in a compatible format. Distinguishing among these different situations allows a program to resolve some errors and to communicate to the user any errors it can’t resolve.
+
+    enum VendingMachineError: Error {
+        case invalidSelection
+        case insufficientFunds(coinsNeeded: Int)
+        case outOfStock
+    }
+    
+    throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
+
 * Lambda expressions, closures, or functions as types
+
+Closures
+
 * Implementation of listeners and event handlers
+
+      class Event<T> {
+
+        typealias EventHandler = T -> ()
+
+        private var eventHandlers = [EventHandler]()
+
+        func addHandler(handler: EventHandler) {
+          eventHandlers.append(handler)
+        }
+
+        func raise(data: T) {
+          for handler in eventHandlers {
+            handler(data)
+          }
+        } 
+      }
+
 * Singleton
   * How is a singleton implemented?
   * Can it be made thread-safe?
