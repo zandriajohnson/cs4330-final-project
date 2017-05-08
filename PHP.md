@@ -114,11 +114,17 @@ No
   
   __get() is utilized for reading data from inaccessible properties.
   
-  ** Backing variables?**
+  Static properties are accessed by using the :: (Double Colon): self::$property
+  
+  **Backing variables?**
+  
+  Not useful.
   
   **Computed properties?**
   
   They are defined by using one of the keywords public, protected, or private, followed by a normal variable declaration.
+  
+  If you declare a property using var instead of one of public, protected, or private, then PHP 5 will treat the property as if it had been declared as public.
   
 ### Interfaces / protocols
   **What does the language support?**
