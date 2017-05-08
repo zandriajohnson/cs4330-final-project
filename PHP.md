@@ -1,6 +1,6 @@
-## Comparison Criteria
+# Comparison Criteria
 
-### Language purpose/genesis
+## Language purpose/genesis
   **Why was the language created?**
   
   PHP was created as a server-side scripting language designed primarily for web development but also used as a general-purpose programming language. 
@@ -13,7 +13,7 @@
   
   It is a reaction to the previous language C, in which he wrote CGI programs to maintain his webpage
   
-### Unique features of the language
+## Unique features of the language
   **Does the language have any particularly unique features?**
   
   Can be embedded into HTML using <?php [insert code] ?>
@@ -30,7 +30,7 @@
   
   XForms
   
-### Name spaces
+## Name spaces
   **How are name spaces implemented?**
   
          <?php
@@ -41,7 +41,7 @@
   
  To solve two problems that authors of libraries and applications encounter when creating re-usable code elements such as classes or functions: name collisions and ability to alias, improving readability.
   
-### Types
+## Types
    **What types does the language support?**
     
  String, Integer, Float (floating point numbers - also called double),
@@ -60,7 +60,7 @@ A PHP reference is an alias, which allows two different variables to write to th
 No
     
     
-### Classes
+## Classes
   **Defining**
   
   Unless autoloading is used, then classes must be defined before they are used.
@@ -100,12 +100,12 @@ No
           print "Destroying " . $this->name . "\n";
         }
   
-### Instance reference name in data type (class)
+## Instance reference name in data type (class)
   **this?  self?**
   
   The pseudo-variable $this is available when a method is called from within an object context.
   
-### Properties
+## Properties
   **Getters and setters...write your own or built in?**
   
   Overloading in PHP provides means to dynamically "create" properties and methods. These dynamic entities are processed via magic methods one can establish in a class for various action types.
@@ -126,7 +126,7 @@ No
   
   If you declare a property using var instead of one of public, protected, or private, then PHP 5 will treat the property as if it had been declared as public.
   
-### Interfaces / protocols
+## Interfaces / protocols
   **What does the language support?**
   
   Interfaces
@@ -168,7 +168,7 @@ No
       }
       
       
-### Inheritance / extension
+## Inheritance / extension
 
 PHP makes use of this principle in its object model. 
 
@@ -176,7 +176,7 @@ The subclass inherits all of the public and protected methods from the parent cl
 
     class Bar extends Foo
 
-### Reflection
+## Reflection
   **What reflection abilities are supported?**
   
   PHP 5 comes with a complete reflection API that adds the ability to reverse-engineer classes, interfaces, functions, methods and extensions. Additionally, the reflection API offers ways to retrieve doc comments for functions, classes and methods.
@@ -187,7 +187,7 @@ The subclass inherits all of the public and protected methods from the parent cl
   
   Through different classes such as Reflection, ReflectionClass, ReflectionMethod, Reflector interfaces, etc.
   
-### Memory management
+## Memory management
   **How is it handled?**
   
   Tracking allocations allow the memory manager to avoid leaks, a thorn in the side of most Hackers. When PHP is built in debug mode (--enable-debug), detected leaks are reported, in a perfect world they would never get to deployment.
@@ -228,14 +228,14 @@ The subclass inherits all of the public and protected methods from the parent cl
   
   This second piece of additional information, called "refcount", contains how many variable names (also called symbols) point to this one zval container.
   
-### Comparisons of references and values
+## Comparisons of references and values
   **How are values compared? (i.e. comparing two strings)**
   
   $a == $b	Equal	TRUE if $a is equal to $b after type juggling.
   
   $a === $b	Identical	TRUE if $a is equal to $b, and they are of the same type.
   
-### Null/nil references
+## Null/nil references
   **Which does the language use? (null/nil/etc)**
   
   NULL
@@ -244,7 +244,7 @@ The subclass inherits all of the public and protected methods from the parent cl
   
   PHP has is_null() and unset() functions to check if something is null or remove null, be null casting is not allowed.
   
-### Errors and exception handling
+## Errors and exception handling
 
       "die()" statements
 
@@ -259,13 +259,13 @@ The subclass inherits all of the public and protected methods from the parent cl
   
   PHP also has try, catch, finally for exception handling.
 
-### Lambda expressions, closures, or functions as types
+## Lambda expressions, closures, or functions as types
 
 Anonymous functions, also known as closures, allow the creation of functions which have no specified name. They are most useful as the value of callback parameters, but they have many other uses.
 
 Anonymous functions are implemented using the Closure class.
 
-### Implementation of listeners and event handlers
+## Implementation of listeners and event handlers
 
 xml_set_element_handler()
 
@@ -279,7 +279,7 @@ xml_set_unparsed_entity_decl_handler()
 
 xml_set_notation_decl_handler() .. etc.
 
-### Singleton
+## Singleton
   **How is a singleton implemented?**
   
   The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire request lifecycle in a web application. 
@@ -288,11 +288,33 @@ xml_set_notation_decl_handler() .. etc.
   
   **Can it be made thread-safe?**
   
+  Yes
+  
   **Can the singleton instance be lazily instantiated?**
   
   You should be wary when using the singleton pattern, as by its very nature it introduces global state into your application, reducing testability.
   
-### Procedural programming
+       use \LazyProperty\LazyPropertiesTrait;
+
+       protected $userRepository;
+
+      public function __construct()
+       {
+        // ...
+        // mind this - we are marking "userRepository" as lazy
+        $this->initLazyProperties(['userRepository']);
+      }
+
+      public function register($user)
+      {
+          // ...
+        // now use the property directly
+        $this->userRepository->add($user);
+        // ...
+      }
+
+  
+## Procedural programming
   **Does the language support procedural programming?**
   
   Yes
@@ -305,7 +327,7 @@ xml_set_notation_decl_handler() .. etc.
 
   Procudural -> mysqli_query($link, "CREATE TEMPORARY TABLE myCountry LIKE Country");
  
-### Functional programming
+## Functional programming
   **Does the language support functional programming?**
   
   Yes
@@ -318,7 +340,7 @@ xml_set_notation_decl_handler() .. etc.
       }
       ?>
    
-### Multithreading
+## Multithreading
   **Threads or thread-like abilities**
   
   The Thread class enables for threads to be created by simply extending it and implementing a run method
