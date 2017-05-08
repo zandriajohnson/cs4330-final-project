@@ -42,7 +42,7 @@
  To solve two problems that authors of libraries and applications encounter when creating re-usable code elements such as classes or functions: name collisions and ability to alias, improving readability.
   
 ### Types
-    **What types does the language support?**
+   **What types does the language support?**
     
     String,
     Integer,
