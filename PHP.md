@@ -246,15 +246,15 @@ The subclass inherits all of the public and protected methods from the parent cl
   
 ## Errors and exception handling
 
-   "die()" statements
+  "die()" statements
 
-    error_function(error_level,error_message,error_file,error_line,error_context)
+  error_function(error_level,error_message,error_file,error_line,error_context)
 
-    error_log() 
+   error_log() 
 
-    trigger_error()
+  trigger_error()
 
-   set_error_handler("customError");
+ set_error_handler("customError");
       
   
   PHP also has try, catch, finally for exception handling.
@@ -320,16 +320,20 @@ xml_set_notation_decl_handler() .. etc.
   Yes
  
  Normal: 
+ 
       $mysqli = new mysqli("localhost", "my_user", "my_password", "world");
   
- Procedural:     
+ Procedural:  
+ 
       $link = mysqli_connect("localhost", "my_user", "my_password", "world");
   
- Normal:      
+ Normal:     
+ 
       $mysqli->query("CREATE TEMPORARY TABLE myCountry LIKE Country");
 
  Procudural:
-       mysqli_query($link, "CREATE TEMPORARY TABLE myCountry LIKE Country");
+ 
+      mysqli_query($link, "CREATE TEMPORARY TABLE myCountry LIKE Country");
  
 ## Functional programming
   **Does the language support functional programming?**
